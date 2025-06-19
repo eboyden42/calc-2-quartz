@@ -1,4 +1,5 @@
 ---
+redirect: /Calculus-II---2025-Spring---Web-home
 title: Welcome to Quartz
 ---
 
