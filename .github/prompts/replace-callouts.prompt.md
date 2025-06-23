@@ -1,4 +1,5 @@
 ---
+mode: agent
 description: "Reformat selected numbered solution steps into styled abstract callouts with nested formatting."
 ---
 
@@ -28,7 +29,7 @@ Apply the following rules exactly to the selected text (`${selectedText}`):
 
 6. **Preserve** all original wording, math content, and logical indentation.
 
-7. **Separate** each step with a blank line.
+7. **Separate** each with an entirely blank line (not even ">").
 ---
 
 ## Example

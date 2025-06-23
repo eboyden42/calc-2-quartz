@@ -97,29 +97,36 @@ Compute the integral: $$\int \cos^2x\cdot \sin^5 x\,dx$$
 
 **Solution**
 >[!abstract]- 1. Swap over the even bunch.
->    - Max even bunch leaving power-one is $\sin^4x$: $$\sin^5x \qquad ⨠⨠ \qquad \sin x\,\big(\sin^2x\big)^2 \qquad ⨠⨠ \qquad \sin x\,\big(1-\cos^2x\big)^2$$
->    - Apply to $\sin^5x$ in the integrand: $$\int \cos^2x\cdot\sin^5x\,dx \qquad ⨠⨠ \qquad \int \cos^2x\cdot\sin x\,\big(1-\cos^2x\big)^2\,dx$$
+>    - Max even bunch leaving power-one is $\sin^4x$: 
+>      $$
+>      \sin^5x \qquad ⨠⨠ \qquad \sin x\,\big(\sin^2x\big)^2 \qquad ⨠⨠ \qquad \sin x\,\big(1-\cos^2x\big)^2
+>      $$
+>    - Apply to $\sin^5x$ in the integrand: 
+>      $$
+>      \int \cos^2x\cdot\sin^5x\,dx \qquad ⨠⨠ \qquad \int \cos^2x\cdot\sin x\,\big(1-\cos^2x\big)^2\,dx
+>      $$
 
 >[!abstract]- 2. Perform $u$-substitution on the power-one integrand.
 >    - Set $u=\cos x$.
 >    - Hence $du=\sin x\,dx$. Recognize this in the integrand.
->    - Convert the integrand: 
+>    - Convert the integrand:
 >      $$
 >      \begin{align*}
->      \int\cos^2x\cdot\sin x\big(1-\cos^2x\big)^2\,dx \qquad &⨠⨠ \qquad  \int \cos^2x\cdot\big(1-\cos^2x\big)^2\big(\sin x\,dx\big)\\\\
->      \qquad &⨠⨠ \qquad \int u^2\cdot(1-u^2)^2\,du
+>      \int\cos^2x\cdot\sin x\big(1-\cos^2x\big)^2\,dx 
+>      &\qquad ⨠⨠ \qquad  \int \cos^2x\cdot\big(1-\cos^2x\big)^2\big(\sin x\,dx\big) \\
+>      &\qquad ⨠⨠ \qquad \int u^2\cdot(1-u^2)^2\,du
 >      \end{align*}
 >      $$
 
 >[!abstract]- 3. Perform the integral.
->    - Expand integrand and use power rule to obtain: 
+>    - Expand integrand and use power rule to obtain:
 >      $$
 >      \int u^2\cdot(1-u^2)^2\,du = \frac{1}{3}u^3 - \frac{2}{5}u^5 + \frac{1}{7}u^7 + C
 >      $$
->    - Insert definition $u=\cos x$: 
+>    - Insert definition $u=\cos x$:
 >      $$
 >      \begin{gather*}
->      \int \cos^2x\cdot\sin^5 x\,dx \quad ⨠⨠ \quad  \int u^2\cdot(1-u^2)^2\,du \\\\
+>      \int \cos^2x\cdot\sin^5 x\,dx \quad ⨠⨠ \quad  \int u^2\cdot(1-u^2)^2\,du \\
 >      ⨠⨠ \quad  \frac{1}{3}\cos^3 x - \frac{2}{5}\cos^5 x + \frac{1}{7}\cos^7 x + C
 >      \end{gather*}
 >      $$
