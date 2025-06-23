@@ -7,23 +7,47 @@ title: Examples - Unit 01
 A rotation-symmetric 3D body has cross section given by the region between $y=3x+2$, $y=6-x$, $x=0$, and is rotated around the $y$-axis. Find the volume of this 3D body.
 
 **Solution**
-1. & Define the cross section region.
-    - Bounded above-right by $y=6-x$.
-    - Bounded below-right by $y=3x+2$.
-    - ! These intersect at $x=1$.
-    - Bounded at left by $x=0$.
-2. && Define range of integration variable.
-    - Rotated around $y$-axis, therefore use $x$ for integration variable (shells!).
-    - Integral over $x\in [0,1]$: 
-      $$V=\int_0^1 2\pi Rh\,dr$$
-3. & Interpret $R$.
-    - Radius of shell-cylinder equals distance along $x$: $$R(x)=x$$
-4. & Interpret $h$.
-    - Height of shell-cylinder equals distance from lower to upper bounding lines: $$\begin{align*}h(x)&= (6-x)-(3x+2)\\ &= 4-4x\end{align*}$$
-5. & Interpret $dr$.
-    - $dr$ is limit of $\Delta r$ which equals $\Delta x$ here so $dr=dx$.
-6. & Plug data in volume formula.
-    - Insert data and compute integral: $$\begin{align*}V&= \int_0^1 2\pi Rh\,dr\\\\&= \int_0^1 2\pi\cdot x(4-4x)\,dx\\\\&=\left.2\pi\left(2x^2-\frac{4x^3}{3}\right)\right|_0^1 = \frac{4\pi}{3}\end{align*}$$
+>[!abstract]- 1. Define the cross section region.
+>    - Bounded above-right by $y=6-x$.
+>    - Bounded below-right by $y=3x+2$.
+>    - > [!warning] These intersect at $x=1$.
+>    - Bounded at left by $x=0$.
+
+>[!abstract]- 2. Define range of integration variable.
+>    - Rotated around $y$-axis, therefore use $x$ for integration variable (shells!).
+>    - Integral over $x\in [0,1]$:
+>
+>$$
+>V=\int_0^1 2\pi Rh\,dr
+>$$
+>
+
+>[!abstract]- 3. Interpret $R$.
+>    - Radius of shell-cylinder equals distance along $x$:
+>
+>$$
+>R(x)=x
+>$$
+
+>[!abstract]- 4. Interpret $h$.
+>    - Height of shell-cylinder equals distance from lower to upper bounding lines: 
+>
+>$$
+>\begin{align*}h(x)&= (6-x)-(3x+2)\\ 
+>&= 4-4x\end{align*}
+>$$
+
+>[!abstract]- 5. Interpret $dr$.
+>    - $dr$ is limit of $\Delta r$ which equals $\Delta x$ here so $dr=dx$.
+
+>[!abstract]- 6. Plug data in volume formula.
+>    - Insert data and compute integral: 
+>
+>$$
+>\begin{align*}V&= \int_0^1 2\pi Rh\,dr\\\\
+>&= \int_0^1 2\pi\cdot x(4-4x)\,dx\\\\
+>&=\left.2\pi\left(2x^2-\frac{4x^3}{3}\right)\right|_0^1 = \frac{4\pi}{3}\end{align*}
+>$$
 
 #### 02 - Revolution of a sinusoid
 Consider the region given by revolving the first hump of $y=\sin(x)$ about the $y$-axis. Set up an integral that gives the volume of this region using the method of shells.
@@ -35,19 +59,32 @@ Consider the region given by revolving the first hump of $y=\sin(x)$ about the $
 Compute the integral: $\displaystyle\int x\cos x\,dx$
 
 **Solution**
-1. & Choose $u=x$. %% fold %% 
-    - Set $u(x)=x$ because $x$ *simplifies* when differentiated.
-      (By the trick: $x$ is *Algebraic*, i.e. more “$u$”, and $\cos x$ is *Trig*, more “$v$”.)
-    - Remaining factor must be $v'$: $$v'(x)=\cos x$$
-2. && Compute $u'$ and $v$. %% fold %% 
-    - Derive $u$: $$u'=1$$
-    - Antiderive $v'$: $$v=\sin x$$
-    - Obtain chart: $$\begin{array}{c|c}u=x&v'=\cos x\\\hline u'=1&v=\sin x\end{array} \begin{array}{l}\quad\longrightarrow\quad\int u\cdot v'\qquad\text{original} \\ \quad\longrightarrow\quad\int u'\cdot v\qquad\text{final} \end{array}$$
-3. && Plug into IBP formula. %% fold %% 
-    - Plug in all data: $$\int x\cos x\,dx=x\sin x-\int 1\cdot\sin x\,dx$$
-    - Compute integral on RHS: $$\int x\cos x\,dx = x\sin x+\cos x+C$$
-      Note: the *point* of IBP is that this integral is easier than the first one!
-4. & Final answer is: $\;x\sin x+\cos x + C$
+>[!abstract]- 1. Choose $u=x$.
+>    - Set $u(x)=x$ because $x$ *simplifies* when differentiated.
+>      (By the trick: $x$ is *Algebraic*, i.e. more “$u$”, and $\cos x$ is *Trig*, more “$v$”.)
+>    - Remaining factor must be $v'$: $$v'(x)=\cos x$$
+
+>[!abstract]- 2. Compute $u'$ and $v$.
+>    - Derive $u$: $$u'=1$$
+>    - Antiderive $v'$: $$v=\sin x$$
+>    - Obtain chart:
+>      $$
+>      \begin{array}{c|c}
+>      u = x & v' = \cos x \\
+>      \hline
+>      u' = 1 & v = \sin x
+>      \end{array}
+>      $$
+
+>[!abstract]- 3. Plug into IBP formula.
+>    - Plug in all data: $$\int x\cos x\,dx = x\sin x - \int 1\cdot\sin x\,dx$$
+>    - Compute integral on RHS: $$\int x\cos x\,dx = x\sin x + \cos x + C$$
+>    - Note: the *point* of IBP is that this integral is easier than the first one!
+
+>[!abstract]- 4. Final answer:
+>    $$
+>    x\sin x + \cos x + C
+>    $$
 
 #### 04 - Hidden A
 Compute the integral: $$\int \ln x\,dx$$
@@ -57,18 +94,40 @@ Compute the integral: $$\int \ln x\,dx$$
 ## Trig power products
 #### 05 - Power product - odd power
 Compute the integral: $$\int \cos^2x\cdot \sin^5 x\,dx$$
+
 **Solution**
-1. &&& Swap over the even bunch.
-    - Max even bunch leaving power-one is $\sin^4x$: $$\sin^5x \qquad ⨠⨠ \qquad \sin x\,\big(\sin^2x\big)^2 \qquad ⨠⨠ \qquad \sin x\,\big(1-\cos^2x\big)^2$$
-    - Apply to $\sin^5x$ in the integrand: $$\int \cos^2x\cdot\sin^5x\,dx \qquad ⨠⨠ \qquad \int \cos^2x\cdot\sin x\,\big(1-\cos^2x\big)^2\,dx$$
-2. &&& Perform $u$-substitution on the power-one integrand.
-    - Set $u=\cos x$.
-    - Hence $du=\sin x\,dx$. Recognize this in the integrand.
-    - Convert the integrand: $$\begin{align*}\int\cos^2x\cdot\sin x\big(1-\cos^2x\big)^2\,dx \qquad &⨠⨠ \qquad  \int \cos^2x\cdot\big(1-\cos^2x\big)^2\big(\sin x\,dx\big)\\\\ \qquad &⨠⨠ \qquad \int u^2\cdot(1-u^2)^2\,du \end{align*}$$
-3. & Perform the integral.
-    - Expand integrand and use power rule to obtain: $$\int u^2\cdot(1-u^2)^2\,du = \frac{1}{3}u^3 - \frac{2}{5}u^5 + \frac{1}{7}u^7 + C$$
-    - Insert definition $u=\cos x$: $$\begin{gather*}\int \cos^2x\cdot\sin^5 x\,dx \quad ⨠⨠ \quad  \int u^2\cdot(1-u^2)^2\,du \\\\ ⨠⨠ \quad  \frac{1}{3}\cos^3 x - \frac{2}{5}\cos^5 x + \frac{1}{7}\cos^7 x + C\end{gather*}$$
-4. & This is our final answer.
+>[!abstract]- 1. Swap over the even bunch.
+>    - Max even bunch leaving power-one is $\sin^4x$: $$\sin^5x \qquad ⨠⨠ \qquad \sin x\,\big(\sin^2x\big)^2 \qquad ⨠⨠ \qquad \sin x\,\big(1-\cos^2x\big)^2$$
+>    - Apply to $\sin^5x$ in the integrand: $$\int \cos^2x\cdot\sin^5x\,dx \qquad ⨠⨠ \qquad \int \cos^2x\cdot\sin x\,\big(1-\cos^2x\big)^2\,dx$$
+
+>[!abstract]- 2. Perform $u$-substitution on the power-one integrand.
+>    - Set $u=\cos x$.
+>    - Hence $du=\sin x\,dx$. Recognize this in the integrand.
+>    - Convert the integrand: 
+>      $$
+>      \begin{align*}
+>      \int\cos^2x\cdot\sin x\big(1-\cos^2x\big)^2\,dx \qquad &⨠⨠ \qquad  \int \cos^2x\cdot\big(1-\cos^2x\big)^2\big(\sin x\,dx\big)\\\\
+>      \qquad &⨠⨠ \qquad \int u^2\cdot(1-u^2)^2\,du
+>      \end{align*}
+>      $$
+
+>[!abstract]- 3. Perform the integral.
+>    - Expand integrand and use power rule to obtain: 
+>      $$
+>      \int u^2\cdot(1-u^2)^2\,du = \frac{1}{3}u^3 - \frac{2}{5}u^5 + \frac{1}{7}u^7 + C
+>      $$
+>    - Insert definition $u=\cos x$: 
+>      $$
+>      \begin{gather*}
+>      \int \cos^2x\cdot\sin^5 x\,dx \quad ⨠⨠ \quad  \int u^2\cdot(1-u^2)^2\,du \\\\
+>      ⨠⨠ \quad  \frac{1}{3}\cos^3 x - \frac{2}{5}\cos^5 x + \frac{1}{7}\cos^7 x + C
+>      \end{gather*}
+>      $$
+
+>[!abstract]- 4. Final answer:
+>    $$
+>    \frac{1}{3}\cos^3 x - \frac{2}{5}\cos^5 x + \frac{1}{7}\cos^7 x + C
+>    $$
 
 #### 06 - Power product - tan and sec
 Compute the integral: $$\int \tan^5x\cdot\sec^3x\,dx$$
